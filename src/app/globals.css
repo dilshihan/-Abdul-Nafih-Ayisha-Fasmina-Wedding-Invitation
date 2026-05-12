@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F9F9F7;
+  --color-gold: #D4AF37;
+  --color-beige: #F5F5DC;
+  --color-emerald-deep: #004036;
+  --color-soft-black: #1A1A1A;
+  
+  --font-serif: var(--font-cinzel), serif;
+  --font-accent: var(--font-playfair), serif;
+  --font-sans: var(--font-inter), sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+    to { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; transform: scale(1.1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+  }
+}
+
+:root {
+  --background: #F9F9F7;
+  --foreground: #1A1A1A;
+}
+
+@layer base {
+  html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    @apply bg-ivory text-soft-black antialiased overflow-x-hidden;
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glass-gold {
+    @apply bg-gold/5 backdrop-blur-md border border-gold/20;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 10s ease-in-out infinite;
+  }
+
+  .cinematic-mask {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  }
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide Next.js Dev Overlay & Indicators */
+#nextjs-portal, 
+[data-nextjs-toast], 
+[data-nextjs-dialog-overlay],
+.nextjs-static-indicator,
+[data-nextjs-static-indicator],
+#nextjs-static-indicator {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
