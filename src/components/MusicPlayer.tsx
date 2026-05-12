@@ -55,7 +55,7 @@ export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={togglePlay}
-        className="fixed bottom-8 right-8 z-[60] p-4 bg-white/10 backdrop-blur-md border border-gold/20 rounded-full text-gold shadow-glow group hover:bg-gold/10 transition-all"
+        className="fixed bottom-10 right-6 md:bottom-12 md:right-10 z-[9999] w-14 h-14 flex items-center justify-center bg-white/20 backdrop-blur-xl border border-gold/30 rounded-full text-gold shadow-glow-premium group hover:bg-gold/20 transition-all duration-500"
         title={isPlaying ? "Pause Music" : "Play Music"}
       >
         <AnimatePresence mode="wait">
@@ -66,7 +66,7 @@ export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
               animate={{ opacity: 1, rotate: 0 }}
               exit={{ opacity: 0, rotate: 45 }}
             >
-              <Music2 size={24} className="animate-pulse" />
+              <Music2 className="w-5 h-5 md:w-6 md:h-6 animate-pulse" />
             </motion.div>
           ) : (
             <motion.div
@@ -75,18 +75,18 @@ export default function MusicPlayer({ autoPlay = false }: MusicPlayerProps) {
               animate={{ opacity: 1, rotate: 0 }}
               exit={{ opacity: 0, rotate: -45 }}
             >
-              <Music size={24} />
+              <Music className="w-5 h-5 md:w-6 md:h-6" />
             </motion.div>
           )}
         </AnimatePresence>
         
         {/* Visualizer bars when playing */}
         {isPlaying && (
-          <div className="absolute -top-1 left-1/2 -translate-x-1/2 flex gap-1 h-3 items-end">
+          <div className="absolute -top-1 left-1/2 -translate-x-1/2 flex gap-0.5 md:gap-1 h-2 md:h-3 items-end">
             {[1, 2, 3].map((i) => (
               <motion.div
                 key={i}
-                animate={{ height: [4, 12, 4] }}
+                animate={{ height: [3, 8, 3] }}
                 transition={{
                   duration: 0.5 + i * 0.2,
                   repeat: Infinity,

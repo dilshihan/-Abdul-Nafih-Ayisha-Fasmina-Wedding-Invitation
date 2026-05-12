@@ -21,20 +21,22 @@ export default function Home() {
 
       <AnimatePresence>
         {isOpened && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
-          >
+          <>
             <MusicPlayer autoPlay={isOpened} />
-            <Hero />
-            <CoupleSection />
-            <Countdown />
-            <CelebrationSection />
-            <VenueSection />
-            <Guestbook />
-            <Footer />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
+              <Hero />
+              <CoupleSection />
+              <Countdown />
+              <CelebrationSection />
+              <VenueSection />
+              <Guestbook />
+              <Footer />
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </main>

@@ -17,14 +17,14 @@ export default function CoupleSection() {
       name: "Ayisha Fasmina",
       parents: "Daughter of Mr. Kunhi Muhammad & Mrs. Haseena",
       address: "Kattakath House, Velimukku, Alungal",
-      image: "/images/bride.jpeg",
+      image: "/images/bride4.jpeg",
     },
   ];
 
   return (
-    <section className="py-32 bg-ivory overflow-hidden">
+    <section className="py-20 md:py-32 bg-ivory overflow-hidden">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {couple.map((person, idx) => (
             <motion.div
               key={idx}
@@ -46,18 +46,18 @@ export default function CoupleSection() {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <span className="text-gold font-serif tracking-[0.3em] uppercase text-sm block">
+              <div className="space-y-3 md:space-y-4">
+                <span className="text-gold font-serif tracking-[0.3em] uppercase text-xs md:text-sm block">
                   {person.role}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-serif text-soft-black leading-tight">
+                <h3 className="text-3xl md:text-5xl font-serif text-soft-black leading-tight">
                   {person.name}
                 </h3>
                 <div className="w-12 h-[1px] bg-gold mx-auto" />
-                <p className="font-serif text-gold/80 italic text-lg md:text-xl">
+                <p className="font-serif text-gold/80 italic text-base md:text-xl">
                   {person.parents}
                 </p>
-                <p className="font-sans text-soft-black/60 text-sm max-w-xs mx-auto leading-relaxed">
+                <p className="font-sans text-soft-black/60 text-xs md:text-sm max-w-xs mx-auto leading-relaxed">
                   {person.address}
                 </p>
               </div>

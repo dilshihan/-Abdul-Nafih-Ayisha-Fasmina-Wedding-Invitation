@@ -28,9 +28,9 @@ export default function WeddingDetails() {
   ];
 
   return (
-    <section className="py-32 bg-ivory relative">
+    <section className="py-20 md:py-32 bg-ivory relative">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -40,7 +40,7 @@ export default function WeddingDetails() {
           >
             <div className="space-y-4">
               <span className="text-gold font-serif tracking-[0.3em] uppercase text-sm">Event Details</span>
-              <h2 className="text-4xl md:text-5xl font-serif text-soft-black leading-tight">Where & When</h2>
+              <h2 className="text-3xl md:text-5xl font-serif text-soft-black leading-tight">Where & When</h2>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-8">
@@ -61,7 +61,7 @@ export default function WeddingDetails() {
               ))}
             </div>
 
-            <button className="px-8 py-4 bg-soft-black text-ivory font-serif tracking-widest hover:bg-gold transition-colors duration-500 rounded-full">
+            <button className="w-full md:w-auto px-8 py-4 bg-soft-black text-ivory font-serif tracking-widest hover:bg-gold transition-colors duration-500 rounded-full text-sm md:text-base">
               VIEW ON GOOGLE MAPS
             </button>
           </motion.div>
@@ -74,8 +74,8 @@ export default function WeddingDetails() {
             viewport={{ once: true }}
             className="glass-gold p-8 md:p-12 rounded-3xl shadow-2xl relative"
           >
-            <div className="absolute top-0 right-0 p-8 opacity-10 font-serif text-6xl">RSVP</div>
-            <h3 className="text-3xl font-serif text-soft-black mb-8 text-center">Will you join us?</h3>
+            <div className="absolute top-0 right-0 p-4 md:p-8 opacity-10 font-serif text-4xl md:text-6xl">RSVP</div>
+            <h3 className="text-2xl md:text-3xl font-serif text-soft-black mb-8 text-center">Will you join us?</h3>
             
             <form className="space-y-6">
               <div className="space-y-2">

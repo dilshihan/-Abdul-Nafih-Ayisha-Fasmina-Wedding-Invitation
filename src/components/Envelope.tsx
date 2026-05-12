@@ -41,7 +41,7 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
           transition={{ duration: 1.5, ease: "easeInOut" }}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-soft-black/90 backdrop-blur-xl"
         >
-          <div className="relative w-[320px] h-[420px] md:w-[450px] md:h-[580px] perspective-[1000px] cursor-pointer group" onClick={handleOpen}>
+          <div className="relative w-[300px] h-[400px] md:w-[450px] md:h-[580px] perspective-[1000px] cursor-pointer group" onClick={handleOpen}>
             
             {/* Envelope Back */}
             <div className="absolute inset-0 bg-beige rounded-xl shadow-2xl overflow-hidden border border-gold/10">
@@ -56,12 +56,12 @@ export default function Envelope({ onOpen }: EnvelopeProps) {
               className="absolute inset-4 bg-ivory rounded-lg shadow-lg z-10 border border-gold/20 p-8 flex flex-col items-center justify-center text-center"
             >
               <div className="absolute inset-2 border border-gold/10" />
-              <div className="space-y-6 relative z-10">
-                <span className="font-serif text-gold tracking-[0.3em] uppercase text-xs">Wedding Invitation</span>
-                <h2 className="font-serif text-3xl md:text-5xl text-soft-black">Abdul Nafih <br/> <span className="text-gold italic font-accent">&</span> <br/> Ayisha Fasmina</h2>
+              <div className="space-y-4 md:space-y-6 relative z-10">
+                <span className="font-serif text-gold tracking-[0.3em] uppercase text-[10px] md:text-xs">Wedding Invitation</span>
+                <h2 className="font-serif text-2xl md:text-5xl text-soft-black leading-tight">Abdul Nafih <br className="hidden md:block"/> <span className="text-gold italic font-accent">&</span> <br className="hidden md:block"/> Ayisha Fasmina</h2>
                 <div className="w-12 h-[1px] bg-gold mx-auto" />
-                <p className="font-serif text-soft-black/60 italic text-sm">Save The Date</p>
-                <p className="font-serif text-soft-black tracking-[0.2em] text-sm uppercase">14.06.2026</p>
+                <p className="font-serif text-soft-black/60 italic text-xs md:text-sm">Save The Date</p>
+                <p className="font-serif text-soft-black tracking-[0.2em] text-xs md:text-sm uppercase">14.06.2026</p>
               </div>
             </motion.div>
 

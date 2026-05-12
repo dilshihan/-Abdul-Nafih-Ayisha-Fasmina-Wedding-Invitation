@@ -5,13 +5,13 @@ import { MessageSquare, Send } from "lucide-react";
 
 export default function Guestbook() {
   return (
-    <section className="py-32 bg-ivory">
+    <section className="py-16 md:py-32 bg-ivory">
       <div className="max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center mb-24"
+          className="text-center mb-12 md:mb-24"
         >
           <span className="text-gold font-serif tracking-[0.3em] uppercase text-sm mb-4 block">Leave Your Blessings</span>
           <h2 className="text-4xl md:text-6xl font-serif mb-4">Guestbook</h2>

@@ -61,7 +61,7 @@ export default function Timeline() {
             className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-gold hidden md:block"
           />
 
-          <div className="space-y-32">
+          <div className="space-y-20 md:space-y-32">
             {stories.map((story, idx) => (
               <div key={idx} className={`flex flex-col md:flex-row items-center gap-12 ${idx % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                 <motion.div

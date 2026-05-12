@@ -63,19 +63,19 @@ export default function Footer() {
               className="hover:text-gold transition-colors flex items-center justify-center gap-2 group"
             >
               <InstagramIcon size={14} className="group-hover:scale-110 transition-transform" />
-              <span>© All rights reserved</span>
+              <span>© All rights reserved Dilshihan</span>
             </a>
           </motion.div>
         </div>
       </div>
 
       {/* Decorative corner elements */}
-        <div className="absolute bottom-0 left-0 p-12 opacity-5 hidden md:block">
-          <div className="w-48 h-48 border-l border-b border-gold" />
-        </div>
-        <div className="absolute bottom-0 right-0 p-12 opacity-5 hidden md:block">
-          <div className="w-48 h-48 border-r border-b border-gold" />
-        </div>
+      <div className="absolute bottom-0 left-0 p-12 opacity-5 hidden md:block">
+        <div className="w-48 h-48 border-l border-b border-gold" />
+      </div>
+      <div className="absolute bottom-0 right-0 p-12 opacity-5 hidden md:block">
+        <div className="w-48 h-48 border-r border-b border-gold" />
+      </div>
     </footer>
   );
 }

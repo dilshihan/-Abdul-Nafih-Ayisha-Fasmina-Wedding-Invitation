@@ -70,6 +70,16 @@
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
   }
 
+  .shadow-glow-premium {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+    animation: glow-pulse 3s infinite alternate;
+  }
+
+  @keyframes glow-pulse {
+    0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.3); }
+    100% { box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+  }
+
   .animate-pulse-slow {
     animation: pulse-slow 10s ease-in-out infinite;
   }
@@ -105,8 +115,18 @@ html.lenis {
 [data-nextjs-dialog-overlay],
 .nextjs-static-indicator,
 [data-nextjs-static-indicator],
-#nextjs-static-indicator {
+#nextjs-static-indicator,
+#__next-build-watcher,
+.next-dev-overlay,
+#next-dev-overlay,
+#nextjs-static-indicator-root,
+.nextjs-static-indicator-root {
   display: none !important;
   visibility: hidden !important;
   pointer-events: none !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
 }

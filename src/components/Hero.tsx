@@ -67,22 +67,22 @@ export default function Hero() {
       {/* Content */}
       <motion.div 
         style={{ opacity }}
-        className="relative z-20 text-center text-white px-4 flex flex-col items-center"
+        className="relative z-20 text-center text-white px-6 flex flex-col items-center w-full max-w-4xl"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="mb-8"
+          className="mb-6 md:mb-8"
         >
-          <span className="font-serif text-xl md:text-2xl text-gold tracking-normal mb-2 block">
+          <span className="font-serif text-lg md:text-2xl text-gold tracking-widest mb-2 block">
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </span>
-          <p className="font-serif text-sm md:text-base text-ivory/80 italic mb-4">
+          <p className="font-serif text-xs md:text-base text-ivory/80 italic mb-4">
             With Allah&apos;s Blessings
           </p>
-          <div className="w-32 h-[1px] bg-gold/30 mx-auto mb-6" />
-          <p className="font-serif text-sm md:text-base tracking-[0.3em] uppercase opacity-80">
+          <div className="w-24 md:w-32 h-[1px] bg-gold/30 mx-auto mb-6" />
+          <p className="font-serif text-xs md:text-sm tracking-[0.3em] uppercase opacity-80">
             The Wedding of
           </p>
         </motion.div>
@@ -91,10 +91,10 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
-          className="font-serif text-4xl md:text-8xl lg:text-9xl mb-8 tracking-tighter"
+          className="font-serif text-3xl sm:text-5xl md:text-8xl lg:text-9xl mb-6 md:mb-8 tracking-tighter leading-tight"
         >
           <span className="block">Abdul Nafih</span>
-          <span className="text-gold italic font-accent text-3xl md:text-6xl block my-4">&</span>
+          <span className="text-gold italic font-accent text-2xl md:text-6xl block my-2 md:my-4">&</span>
           <span className="block">Ayisha Fasmina</span>
         </motion.h1>
 
@@ -104,8 +104,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 2 }}
           className="flex flex-col items-center"
         >
-          <div className="w-16 h-[1px] bg-gold/50 mb-6" />
-          <p className="font-serif text-lg md:text-xl tracking-[0.2em] uppercase">
+          <div className="w-12 md:w-16 h-[1px] bg-gold/50 mb-4 md:mb-6" />
+          <p className="font-serif text-base md:text-xl tracking-[0.2em] uppercase">
             June 14, 2026
           </p>
         </motion.div>
