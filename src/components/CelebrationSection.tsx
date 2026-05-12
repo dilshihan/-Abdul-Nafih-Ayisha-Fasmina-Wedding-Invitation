@@ -55,7 +55,7 @@ export default function CelebrationSection() {
             <div className="w-full h-[1px] bg-gold/20" />
 
             <p className="font-sans text-ivory/70 leading-relaxed max-w-xl mx-auto italic">
-              "Join us for the sacred Nikkah ceremony as we exchange our vows before Allah and our beloved families."
+              &quot;Join us for the sacred Nikkah ceremony as we exchange our vows before Allah and our beloved families.&quot;
             </p>
           </motion.div>
         </div>

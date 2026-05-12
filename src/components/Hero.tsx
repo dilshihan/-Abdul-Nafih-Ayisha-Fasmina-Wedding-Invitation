@@ -11,8 +11,21 @@ export default function Hero() {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
+  const [particles, setParticles] = useState<{id: number, width: string, height: string, left: string, top: string, delay: string, duration: string}[]>([]);
+
   useEffect(() => {
-    setIsMounted(true);
+    requestAnimationFrame(() => {
+      setIsMounted(true);
+      setParticles([...Array(20)].map((_, i) => ({
+        id: i,
+        width: Math.random() * 6 + 2 + "px",
+        height: Math.random() * 6 + 2 + "px",
+        left: Math.random() * 100 + "%",
+        top: Math.random() * 100 + "%",
+        delay: Math.random() * 5 + "s",
+        duration: Math.random() * 10 + 10 + "s",
+      })));
+    });
   }, []);
 
   return (
@@ -35,17 +48,17 @@ export default function Hero() {
 
       {/* Floating Particles (Client Side Only) */}
       <div className="absolute inset-0 pointer-events-none z-10">
-        {isMounted && [...Array(20)].map((_, i) => (
+        {isMounted && particles.map((p) => (
           <div
-            key={i}
+            key={p.id}
             className="absolute bg-gold/30 rounded-full blur-[2px] animate-float"
             style={{
-              width: Math.random() * 6 + 2 + "px",
-              height: Math.random() * 6 + 2 + "px",
-              left: Math.random() * 100 + "%",
-              top: Math.random() * 100 + "%",
-              animationDelay: Math.random() * 5 + "s",
-              animationDuration: Math.random() * 10 + 10 + "s",
+              width: p.width,
+              height: p.height,
+              left: p.left,
+              top: p.top,
+              animationDelay: p.delay,
+              animationDuration: p.duration,
             }}
           />
         ))}
@@ -66,7 +79,7 @@ export default function Hero() {
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
           </span>
           <p className="font-serif text-sm md:text-base text-ivory/80 italic mb-4">
-            With Allah's Blessings
+            With Allah&apos;s Blessings
           </p>
           <div className="w-32 h-[1px] bg-gold/30 mx-auto mb-6" />
           <p className="font-serif text-sm md:text-base tracking-[0.3em] uppercase opacity-80">

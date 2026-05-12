@@ -58,7 +58,7 @@ export default function Guestbook() {
         </motion.div>
 
         <div className="mt-16 text-center text-soft-black/40 font-serif italic">
-           "Your love and prayers mean the world to us."
+           &quot;Your love and prayers mean the world to us.&quot;
         </div>
       </div>
     </section>

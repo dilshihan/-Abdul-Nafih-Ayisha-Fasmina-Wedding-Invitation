@@ -32,8 +32,10 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    setIsMounted(true);
-    setTimeLeft(calculateTimeLeft());
+    requestAnimationFrame(() => {
+      setIsMounted(true);
+      setTimeLeft(calculateTimeLeft());
+    });
     
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());

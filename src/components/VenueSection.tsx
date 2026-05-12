@@ -57,9 +57,9 @@ export default function VenueSection() {
             </div>
 
             <div className="p-8 glass-gold rounded-2xl space-y-6 border border-gold/20">
-               <p className="font-sans text-soft-black/80 italic">
-                 "Looking forward to seeing you there. Follow the link below for precise navigation to the venue."
-               </p>
+                <p className="font-sans text-soft-black/80 italic">
+                  &quot;Looking forward to seeing you there. Follow the link below for precise navigation to the venue.&quot;
+                </p>
                <a 
                  href="https://maps.app.goo.gl/z3KyVVWUsQW1UuBS7" 
                  target="_blank" 

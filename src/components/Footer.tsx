@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <span className="font-serif text-2xl text-gold italic block mb-6">
-            "And We created you in pairs"
+            &quot;And We created you in pairs&quot;
           </span>
           <p className="font-sans text-ivory/40 text-sm tracking-widest uppercase">Quran 78:8</p>
         </motion.div>
