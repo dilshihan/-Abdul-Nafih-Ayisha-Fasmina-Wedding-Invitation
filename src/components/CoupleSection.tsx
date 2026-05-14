@@ -7,8 +7,8 @@ export default function CoupleSection() {
   const couple = [
     {
       role: "The Groom",
-      name: "Abdul Nafih VK",
-      parents: "Son of Mr. Aboobacker Vkc & Mrs. Naseera Pc",
+      name: "Abdul Nafih",
+      parents: "Son of Mr. Aboobacker & Mrs. Naseera",
       address: "Vallikadan House, Azad Nagar airport road",
       image: "/images/groom.jpeg",
     },

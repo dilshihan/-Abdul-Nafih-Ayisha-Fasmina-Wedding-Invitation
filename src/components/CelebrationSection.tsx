@@ -26,9 +26,9 @@ export default function CelebrationSection() {
             className="glass-gold p-8 md:p-16 rounded-[40px] max-w-3xl w-full text-center space-y-8 relative overflow-hidden group"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gold/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-1000 origin-left" />
-            
+
             <h3 className="text-4xl sm:text-5xl md:text-7xl font-serif text-gold tracking-[0.2em] md:tracking-widest animate-pulse-slow">NIKKAH</h3>
-            
+
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
               <div className="flex items-center gap-3">
                 <Calendar className="text-gold" size={24} />
@@ -37,12 +37,12 @@ export default function CelebrationSection() {
                   <p className="font-serif text-lg">Sunday, June 14, 2026</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <Clock className="text-gold" size={24} />
                 <div className="text-left">
                   <p className="text-xs uppercase tracking-widest text-ivory/40">Time</p>
-                  <p className="font-serif text-lg">11:00 AM – 12:00 PM</p>
+                  <p className="font-serif text-lg">11:00 AM – 02:00 PM</p>
                 </div>
               </div>
             </div>

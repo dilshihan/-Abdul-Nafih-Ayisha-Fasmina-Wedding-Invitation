@@ -76,12 +76,12 @@ export default function WeddingDetails() {
           >
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-10 font-serif text-4xl md:text-6xl">RSVP</div>
             <h3 className="text-2xl md:text-3xl font-serif text-soft-black mb-8 text-center">Will you join us?</h3>
-            
+
             <form className="space-y-6">
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-soft-black/60 font-serif">Full Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   className="w-full bg-white/50 border-b border-gold/30 py-3 px-1 focus:outline-none focus:border-gold transition-colors font-sans"
                   placeholder="Enter your name"
                 />
@@ -89,8 +89,8 @@ export default function WeddingDetails() {
 
               <div className="space-y-2">
                 <label className="text-xs uppercase tracking-widest text-soft-black/60 font-serif">Email Address</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   className="w-full bg-white/50 border-b border-gold/30 py-3 px-1 focus:outline-none focus:border-gold transition-colors font-sans"
                   placeholder="Enter your email"
                 />
