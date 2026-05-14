@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function Countdown() {
   const [isMounted, setIsMounted] = useState(false);
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2026-06-14T12:00:00").getTime();
+    const targetDate = new Date("2026-06-14T14:00:00").getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
     
