@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel, Playfair_Display } from "next/font/google";
+import { Inter, Cinzel, Playfair_Display, Amiri } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 
@@ -18,6 +18,12 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
 });
 
+const amiri = Amiri({
+  variable: "--font-amiri",
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Abdul Nafih & Ayisha Fasmina | Wedding Invitation",
   description: "A luxury cinematic wedding invitation for Abdul Nafih and Ayisha Fasmina.",
@@ -31,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cinzel.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${cinzel.variable} ${playfair.variable} ${amiri.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
         <SmoothScrolling>{children}</SmoothScrolling>

@@ -29,7 +29,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center py-20 md:py-32">
       {/* Background Image with Zoom Effect */}
       <motion.div 
         style={{ y: y1 }}
@@ -75,8 +75,8 @@ export default function Hero() {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="mb-6 md:mb-8"
         >
-          <span className="font-serif text-lg md:text-2xl text-gold tracking-widest mb-2 block">
-            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+          <span className="font-arabic text-3xl md:text-5xl text-gold tracking-normal mb-4 block leading-relaxed text-glow">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
           </span>
           <p className="font-serif text-xs md:text-base text-ivory/80 italic mb-4">
             With Allah&apos;s Blessings

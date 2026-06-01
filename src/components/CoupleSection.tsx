@@ -17,7 +17,7 @@ export default function CoupleSection() {
       name: "Ayisha Fasmina",
       parents: "Daughter of Mr. Kunhi Muhammad & Mrs. Haseena",
       address: "Kattakath House, Velimukku, Alungal",
-      image: "/images/bride4.jpeg",
+      image: "/images/bride5.jpeg",
     },
   ];
 
