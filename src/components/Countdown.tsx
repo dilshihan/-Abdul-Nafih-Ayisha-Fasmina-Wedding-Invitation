@@ -6,7 +6,9 @@ import { motion } from "framer-motion";
 export default function Countdown() {
   const [isMounted, setIsMounted] = useState(false);
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2026-06-14T14:00:00").getTime();
+    // Robust cross-browser safe Date construction (avoids Safari/iOS NaN bugs)
+    // Nikkah Ceremony starts at 11:00 AM on Sunday, June 14, 2026 (Month index 5 is June)
+    const targetDate = new Date(2026, 5, 14, 11, 0, 0).getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
     
@@ -20,9 +22,9 @@ export default function Countdown() {
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
       };
     }
 
